@@ -140,4 +140,38 @@ function getCamelCase(str) {
 }
 console.log(getCamelCase(s));
  */
-//----------------------------------------------------
+//№ 6 ------------------------------------------------
+
+/* 
+      Напишите функцию bmi, 
+      которая вычисляет индекс массы тела (bmi = вес / рост 2 ).
+      если ИМТ <= 18,5, вернуть "Недостаточный вес"
+      если ИМТ <= 25,0, вернуть «Нормальный»
+      если ИМТ <= 30,0 вернуть "Избыточный вес"
+      если ИМТ > 30, верните «Ожирение».
+ */
+/* 
+let num1 = 99;
+let num2 = 176;
+
+function bmi(weight, height) {
+      let index = weight / height ** 2;
+      let count = "";
+      if (index <= 18.5) {
+            return (count += "Underweight");
+      } else if (index <= 25.0) {
+            return (count += "Normal");
+      } else if (index <= 30.0) {
+            return (count += "Overweight");
+      } else if (index > 30) {
+            return (count += "Obese");
+      }
+}
+console.log(bmi(num1, num2));
+ */
+
+// № 7 --------------------------------------
+
+/* 
+
+ */
