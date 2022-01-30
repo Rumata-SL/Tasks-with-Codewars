@@ -173,5 +173,100 @@ console.log(bmi(num1, num2));
 // № 7 --------------------------------------
 
 /* 
-
+      Нарциссическое число — это положительное число, представляющее собой сумму собственных цифр,
+      каждая из которых возведена в степень количества цифр в данном основании. 
+      В этом Ката мы ограничимся десятичными числами (с основанием 10).
+      Например, возьмем 153 (3 цифры), что является самовлюбленным:
+      1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
+      и 1652 (4 цифры), что не является:
+      1^4 + 6^4 + 5^4 + 2^4 = 1 + 1296 + 625 + 16 = 1938
+      Соревнование:
+      Ваш код должен возвращать истину или ложь (не «истину» и «ложь») в зависимости от того,
+      является ли данное число Нарциссическим числом в базе 10. 
+      Это может быть Истина и Ложь на вашем языке, например PHP.
  */
+/* let num1 = 12;
+function checkNarcissisticNumber(value) {
+      let bool = 0;
+
+      let arr = value + "";
+
+      arr = arr.split("");
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+            sum += arr[i] ** arr.length;
+      }
+      if (sum === value) {
+            bool = true;
+      } else {
+            bool = false;
+      }
+
+      return bool;
+}
+console.log(checkNarcissisticNumber(num1));
+ */
+
+//№ 8 ----------------------------------
+/* 
+      Напишите простой метод .camelCase  для строк.
+      Во всех словах первая буква должна быть заглавной без пробелов.
+      Например:
+      "hello case".camelCase() => HelloCase
+      "camel case word".camelCase() => CamelCaseWord
+ */
+/* 
+let str1 = "hello world wild";
+String.prototype.toCamelCase = function () {
+      return this.replace(/(?:^\w|[A-Z]|\b\w)/g, (sbstr, i) => {
+            return i === 0 ? sbstr.toUpperCase() : sbstr.toUpperCase();
+      }).replace(/\s+/g, "");
+};
+console.log(str1.toCamelCase());
+ */
+/*
+let str1 = "hello world wild";
+String.prototype.toCamelCase = function () {
+      let arr = this.split("");
+      arr[0] = arr[0].toUpperCase();
+      for (let i = 1; i < arr.length; i++) {
+            if (arr[i] == " ") {
+                  arr[i + 1] = arr[i + 1].toUpperCase();
+                  arr.splice(i, 1);
+            }
+      }
+      arr = arr.join("");
+      return arr;
+};
+console.log(str1.toCamelCase()); 
+*/
+//№ 9 -------------------------------
+
+/* 
+      Завершите функцию scramble(str1, str2), которая возвращает,
+      true если часть str1символов можно переставить, чтобы они соответствовали str2,
+      иначе возвращает false.
+      Примечания:
+      Будут использоваться только строчные буквы (az). 
+      Никакие знаки препинания или цифры не будут включены.
+      Необходимо учитывать производительность .
+ */
+/* 
+let st1 = "locc";
+let st2 = "occ";
+function sorted(str1, str2) {
+      let count = Object.create(null);
+
+      Array.prototype.forEach.call(str1, (a) => {
+            count[a] = (count[a] || 0) + 1;
+      });
+
+      return Array.prototype.every.call(str2, (a) => {
+            return count[a]--;
+      });
+}
+
+console.log(sorted(st1, st2));
+ */
+
+//№ 10 --------------------------------
