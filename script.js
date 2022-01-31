@@ -270,3 +270,123 @@ console.log(sorted(st1, st2));
  */
 
 //№ 10 --------------------------------
+
+/* 
+      Анаграмма — это результат перестановки букв слова для получения нового слова .
+      Примечание: анаграммы нечувствительны к регистру .
+      Завершите возвращаемую функцию, trueесли два заданных аргумента являются анаграммами друг друга; вернуть falseиначе.
+      Примеры
+      "foefet" является анаграммой "toffee"
+      "Buckethead" является анаграммой "DeathCubeK"
+ */
+/* 
+const isAnagram = function (test, original) {
+      test = test.toLowerCase().split("").sort().join("");
+      original = original.toLowerCase().split("").sort().join("");
+      let res = test == original ? true : false;
+      return res;
+};
+isAnagram("Buckethead", "DeathCubeK"); 
+*/
+//Другое решение
+/* function isAnagram(test, original) {
+      return (
+            test.toLowerCase().split("").sort().join("") ===
+            original.toLowerCase().split("").sort().join("")
+      );
+} */
+
+//Другое решение
+/* String.prototype.sortLetters = function () {
+      return this.toLowerCase().split("").sort().join("");
+};
+
+var isAnagram = function (test, original) {
+      return test.sortLetters() == original.sortLetters();
+}; */
+
+//№ 11 --------------------------------
+
+/*
+      Подсчитайте количество делителей натурального числа n.
+      Случайные тесты доходят до n = 500000.
+      Примеры (ввод --> вывод)
+      4 --> 3 (1, 2, 4)
+      5 --> 2 (1, 5)
+      12 --> 6 (1, 2, 3, 4, 6, 12)
+      30 --> 8 (1, 2, 3, 5, 6, 10, 15, 30) 
+ */
+/* 
+let n = 20;
+let count = 0;
+
+function getDivisorsCnt(n) {
+      for (let i = 1; i <= n; ) {
+            if (n % i === 0) {
+                  count += 1;
+                  console.log(i);
+                  i++;
+            } else {
+                  i++;
+            }
+      }
+}
+ */
+//№ 12 --------------------------------
+/* 
+      Учитывая целое число в качестве входных данных,
+      можете ли вы округлить его до следующего (то есть «большего») числа, кратного 5?
+ */
+/* 
+let a = 26;
+function round5(x) {
+      return Math.ceil(x / 5) * 5;
+}
+console.log(round5(a));
+ */
+//№ 13 --------------------------------
+
+/*
+      Создайте функцию, которая возвращает имя победителя в схватке между двумя бойцами.
+      Каждый боец ​​по очереди атакует другого, и побеждает тот, 
+      кто убьет другого первым.
+      Смерть определяется как наличие health <= 0.
+      Каждый боец ​​будет Fighterобъектом/экземпляром.
+      См. класс бойца ниже на выбранном вами языке.
+      Оба healthи damagePerAttack будут целыми числами больше, чем 0.
+      Вы можете мутировать Fighterобъекты.
+      Пример:
+      function Fighter(name, health, damagePerAttack) {
+            this.name = name;
+            this.health = health;
+            this.damagePerAttack = damagePerAttack;
+            this.toString = function() { return this.name; }
+      }
+ */
+/* class Figther {
+      constructor(name, health, damagePerAttack) {
+            this.name = name;
+            this.health = health;
+            this.damagePerAttack = damagePerAttack;
+      }
+      toString() {
+            return this.name;
+      }
+}
+
+const sergey = new Figther("Serg", 100, 10);
+const kirill = new Figther("Kirr", 100, 12);
+
+function checkKombat(fighter1, fighter2, firstAttacker) {
+      let count1 = Math.ceil(fighter1.health / fighter2.damagePerAttack);
+      console.log(count1);
+      let count2 = Math.ceil(fighter2.health / fighter1.damagePerAttack);
+      console.log(count2);
+
+      if (count1 == count2) {
+            return firstAttacker;
+      } else {
+            return count1 > count2 ? fighter1.name : fighter2.name;
+      }
+}
+console.log(checkKombat(sergey, kirill)); */
