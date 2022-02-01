@@ -63,3 +63,23 @@
       return +sum;
 }
 console.log(sumArr([-2.398])); */
+// 4 -------------------------------
+/*
+      В вашем классе был тест, и вы его прошли. Поздравляем!
+      Но вы амбициозный человек. Вы хотите знать, лучше ли вы,
+      чем средний ученик в вашем классе.
+      Вы получаете массив с результатами тестов ваших сверстников.
+      Теперь посчитайте среднее и сравните свой результат!
+      Вернись True, если тебе лучше, иначе False!
+*/
+/* function betterThanAverage(classPoints, yourPoints) {
+      let sum = 0;
+      for (let i = 0; i < classPoints.length; i++) {
+            sum = sum + classPoints[i];
+      }
+      sum = sum / classPoints.length;
+      return sum < yourPoints;
+}
+console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 69));
+ */
+// 5 ------------------------------
