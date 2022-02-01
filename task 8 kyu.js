@@ -83,3 +83,19 @@ console.log(sumArr([-2.398])); */
 console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 69));
  */
 // 5 ------------------------------
+
+/* 
+      Учитывая массив целых чисел, вернуть новый
+      массив с удвоением каждого значения.
+      Например:
+      [1, 2, 3] --> [2, 4, 6]
+*/
+/* let arr1 = [1, 2, 3, 4];
+function getArr(x) {
+      let arr = [];
+      for (let i = 0; i < x.length; i++) {
+            arr.push(x[i] * 2);
+      }
+      return arr;
+}
+console.log(getArr(arr1)); */
