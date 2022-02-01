@@ -16,5 +16,17 @@ function validatePIN (pin) {
       return /^\d+$/.test(pin) && (pin.length === 4 || pin.length === 6);
 } 
 */
-//
-
+//2 ---------------------
+/* 
+      Учитывая массив единиц и нулей, преобразуйте
+      эквивалентное двоичное значение в целое число.
+      Например: [0, 0, 0, 1]рассматривается 
+      как 0001двоичное представление 1.
+ */
+/* const binaryArrayToNumber = (arr) => {
+      arr = arr.join("").toString(2);
+      arr = parseInt(arr, 2);
+      return arr;
+};
+let num = binaryArrayToNumber([1, 1, 1, 1]);
+console.log(num); */
