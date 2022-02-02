@@ -539,3 +539,123 @@ function num(numbers) {
 }
 console.log(num(str)); */
 //№22-------------------------------------------
+/* 
+      Подсчитайте количество дубликатов
+      Напишите функцию, которая будет возвращать количество различных буквенных символов и цифр,
+      не зависящих от регистра, 
+      которые встречаются во входной строке более 
+      одного раза.
+      Можно предположить, 
+      то входная строка содержит только буквы (как прописные, так и строчные) и числовые цифры
+ */
+
+/* function duplicateCount(text) {
+      let res = 0,
+            obj = {};
+      text.toLowerCase()
+            .split("")
+            .map((str) => {
+                  if (!obj.hasOwnProperty(str)) {
+                        obj[str] = 0;
+                  } else {
+                        if (obj[str] === 0) {
+                              res += 1;
+                        }
+                        obj[str] = obj[str] + 1;
+                  }
+            });
+      return res;
+} */
+//№23-------------------------------------------
+/*
+      Рассмотрим массив/список овец, 
+      где некоторые овцы могут отсутствовать на своем месте. Нам нужна функция, которая подсчитывает количество овец, 
+      присутствующих в массиве (true означает наличие).
+      Например,
+      [true,  true,  true,  false,
+      true,  true,  true,  true ,
+      true,  false, true,  false,
+      true,  false, false, true ,
+      true,  true,  true,  true ,
+      false, false, true,  true]
+      Правильный ответ будет 17. 
+*/
+/* 
+let arr = [
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      true,
+];
+
+function countSheeps(arrayOfSheep) {
+      let count = 0;
+      for (let i = 0; i < arrayOfSheep.length; i++) {
+            if (arrayOfSheep[i] === true) {
+                  count++;
+            }
+      }
+      return count;
+}
+console.log(countSheeps(arr)); */
+//№24-------------------------------------------
+/* 
+      Учитывая строку цифр, вы должны заменить
+      любую цифру ниже 5 на «0»,
+      а любую цифру 5 и выше на «1». 
+      Верните полученную строку.
+      Примечание: ввод никогда не будет пустой строкой 
+*/
+/* let n = "45385593107843568";
+
+function fakeBin(x) {
+      x = x.split("");
+      let arr = [];
+      for (let i = 0; i < x.length; i++) {
+            if (+x[i] < 5) {
+                  arr.push(0);
+            } else if (+x[i] > +5) {
+                  arr.push(1);
+            }
+      }
+      arr = arr.join("");
+      return arr;
+}
+console.log(fakeBin(n));
+ */
+//№25-------------------------------------------
+/*
+      Вам будет предоставлен массив aи значение x.
+      Все, что вам нужно сделать, это проверить,
+      содержит ли предоставленный массив значение.
+      Массив может содержать числа или строки. Х может быть любым.
+      Возврат true, если массив содержит значение, falseесли нет.
+*/
+/* let arr = ["t", "e", "s", "t"];
+function check(a, x) {
+      let bool = 0;
+      bool = a.includes(x);
+      return bool;
+}
+console.log(check(arr, "e")); */
+//№26-------------------------------------------
