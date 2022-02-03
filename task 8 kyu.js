@@ -157,3 +157,12 @@ console.log(cheep(3)); */
 };
 console.log(summation(8)); */
 // 10 -----------------------------
+/*
+      Напишите функцию, которая преобразует входную строку в верхний регистр.
+  */
+/* let srtring = "hello world";
+function makeUpperCase(str) {
+      return str.toUpperCase();
+}
+console.log(makeUpperCase(srtring)); */
+// 11 -----------------------------
