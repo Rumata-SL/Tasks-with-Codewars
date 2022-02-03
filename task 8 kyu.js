@@ -166,3 +166,12 @@ function makeUpperCase(str) {
 }
 console.log(makeUpperCase(srtring)); */
 // 11 -----------------------------
+/*
+Это ката об умножении заданного числа на восемь, если оно четное, и на девять в противном случае. 
+ */
+/* function simpleMultiplication(number) {
+      return number % 2 ? number * 9 : number * 8;
+}
+console.log(simpleMultiplication(5));
+*/
+// 12 -----------------------------
