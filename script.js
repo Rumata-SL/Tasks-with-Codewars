@@ -751,3 +751,24 @@ function minNum(num) {
 }
 console.log(minNum(n)); */
 //32 ---------------------------------
+/* 
+      Напишите функцию , persistenceкоторая 
+      принимает положительный
+      параметр numи возвращает его
+      мультипликативную постоянство,
+      то есть количество раз, которое вы должны умножить на цифры, 
+      numпока не получите одну цифру.
+*/
+/* function persistence(num) {
+      if (num.toString().length === 1) return 0;
+
+      let count = 1;
+      let n = num.toString().split("");
+      for (let i = 0; i < n.length; i++) {
+            count *= parseFloat(n[i]);
+      }
+      return 1 + persistence(parseFloat(count));
+}
+
+console.log(persistence(999), persistence(25), persistence(4)); */
+// 33 --------------------------------
